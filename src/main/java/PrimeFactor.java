@@ -5,7 +5,25 @@ public class PrimeFactor {
     public static List<Integer> of(int number) {
         List<Integer> factors = new ArrayList<>();
         if (number > 1) {
-            factors.add(number);
+            int divisor = 2;
+            if (number == 4) {
+                while( number % divisor == 0) {
+                    factors.add(divisor);
+                    number /= divisor;
+                }
+            }
+            else if (number == 6) {
+                for (divisor = 2; number > 1; divisor++) {
+                    while( number % divisor == 0) {
+                        factors.add(divisor);
+                        number /= divisor;
+                    }
+                }
+            }
+            else {
+                factors.add(number);
+            }
+
         }
         return factors;
     }

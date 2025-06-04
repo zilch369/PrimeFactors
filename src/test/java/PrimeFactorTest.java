@@ -32,4 +32,16 @@ class PrimeFactorTest {
         setUp();
         assertEquals(Arrays.asList(3), PrimeFactor.of(3));
     }
+
+    @Test
+    public void testPrimeFactorsOf4() {
+        setUp();
+        assertEquals(Arrays.asList(2,2), PrimeFactor.of(4));
+    }
+
+    @Test
+    public void testPrimeFactorsOf6() {
+        setUp();
+        assertEquals(Arrays.asList(2,3), PrimeFactor.of(6));
+    }
 }
