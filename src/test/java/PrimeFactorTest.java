@@ -17,31 +17,31 @@ class PrimeFactorTest {
 
     @Test
     public void testPrimeFactorsOf1() {
-        setUp();
         assertEquals(Arrays.asList(), PrimeFactor.of(1));
     }
 
     @Test
     public void testPrimeFactorsOf2() {
-        setUp();
         assertEquals(Arrays.asList(2), PrimeFactor.of(2));
     }
 
     @Test
     public void testPrimeFactorsOf3() {
-        setUp();
         assertEquals(Arrays.asList(3), PrimeFactor.of(3));
     }
 
     @Test
     public void testPrimeFactorsOf4() {
-        setUp();
         assertEquals(Arrays.asList(2,2), PrimeFactor.of(4));
     }
 
     @Test
     public void testPrimeFactorsOf6() {
-        setUp();
         assertEquals(Arrays.asList(2,3), PrimeFactor.of(6));
+    }
+
+    @Test
+    public void testPrimeFactorsOf9() {
+        assertEquals(Arrays.asList(3,3), PrimeFactor.of(9));
     }
 }
